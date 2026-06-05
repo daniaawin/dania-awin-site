@@ -664,28 +664,21 @@ footer.foot .right { justify-self: end; }
   footer.foot .right { justify-self: center; }
 }
 
-/* ---------- Portrait (About page) ---------- */
+/* ---------- Portrait — About page (side-by-side met tekst) ---------- */
 
 .portrait {
-  max-width: var(--measure);
-  margin: 0 auto;
-  padding: 0 0 1.5rem;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.portrait figure {
-  margin: 0;
-  width: 100%;
+  float: right;
+  width: 42%;
   max-width: 24rem;
+  margin: 0.4em 0 1.5rem 2.5rem;
   position: relative;
+  shape-outside: margin-box;
 }
 
 .portrait img {
   width: 100%;
   height: auto;
   display: block;
-  /* Soft warm integration met de cream-palette */
   filter: saturate(0.88) contrast(0.96) sepia(0.05);
   border: 1px solid var(--rule);
 }
@@ -700,22 +693,86 @@ footer.foot .right { justify-self: end; }
   letter-spacing: 0.01em;
 }
 
-/* Optioneel: hairline accent in moss bij de hoek */
-.portrait figure::before {
+/* Hairline mos-accent linksboven het portret */
+.portrait::before {
   content: "";
   position: absolute;
-  left: -1.5rem;
-  top: -1.5rem;
-  width: 4rem;
+  left: -1.25rem;
+  top: -0.75rem;
+  width: 3rem;
   height: 1px;
   background: var(--moss);
   opacity: 0.5;
 }
 
 @media (max-width: 720px) {
-  .portrait { justify-content: center; padding-bottom: 2rem; }
-  .portrait figure { max-width: 100%; }
-  .portrait figure::before { left: 0; }
+  .portrait {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 2rem;
+  }
+  .portrait::before { left: 0; }
+}
+
+/* ---------- Hero portrait (Home page) ---------- */
+
+.hero--with-portrait {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  padding: clamp(3rem, 7vw, 6rem) 0 clamp(3rem, 6vw, 5rem);
+}
+
+.hero--with-portrait .hero__text {
+  max-width: 32rem;
+}
+
+.hero__portrait {
+  margin: 0;
+  position: relative;
+}
+
+.hero__portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(0.88) contrast(0.96) sepia(0.05);
+  border: 1px solid var(--rule);
+}
+
+.hero__portrait figcaption {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-top: 0.85rem;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+
+.hero__portrait::before {
+  content: "";
+  position: absolute;
+  left: -1.25rem;
+  top: -0.75rem;
+  width: 3rem;
+  height: 1px;
+  background: var(--moss);
+  opacity: 0.5;
+}
+
+@media (max-width: 880px) {
+  .hero--with-portrait {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero__portrait {
+    max-width: 22rem;
+    margin: 0 auto;
+    order: -1;
+  }
 }
 
 /* ---------- Language visibility (NL/EN toggle) ---------- */
