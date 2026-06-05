@@ -1,0 +1,286 @@
+# =========================================================
+# Decap CMS — Dania Awin
+# Dit bestand definieert WAT je in de admin-omgeving kunt
+# bewerken en hoe de velden eruitzien. Niet aanpassen tenzij
+# je weet wat je doet — de structuur moet exact aansluiten
+# op site.json en articles.json.
+# =========================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "media"
+public_folder: "/media"
+
+# Geen "editorial workflow" — wijzigingen gaan direct live.
+# (Anders krijg je een pull-request voor elke kleine bewerking.)
+publish_mode: simple
+
+collections:
+
+  # ----- Artikelen / essays -----
+  - name: "articles"
+    label: "Essays"
+    label_singular: "Essay"
+    description: "Je essays en publiek onderzoek. Verschijnt op de Schrijven-pagina."
+    files:
+      - file: "content/articles.json"
+        name: "essays"
+        label: "Alle essays"
+        fields:
+          - name: "articles"
+            label: "Essays"
+            label_singular: "Essay"
+            widget: "list"
+            summary: "{{fields.title_en}} ({{fields.date}})"
+            fields:
+              - { name: "slug", label: "URL-naam (slug)", widget: "string", hint: "Kleine letters en streepjes. Bijv: nieuwe-essay-titel" }
+              - { name: "date", label: "Datum", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { name: "featured", label: "Uitgelicht op homepage?", widget: "boolean", default: false }
+              - { name: "category_nl", label: "Categorie (NL)", widget: "string", hint: "Bijv: Inclusie, Tech & Macht, Instituties, Cultuur" }
+              - { name: "category_en", label: "Category (EN)", widget: "string" }
+              - { name: "title_nl", label: "Titel (NL)", widget: "string" }
+              - { name: "title_en", label: "Title (EN)", widget: "string" }
+              - { name: "excerpt_nl", label: "Samenvatting (NL)", widget: "text", hint: "Twee à drie regels — verschijnt onder de titel in het archief." }
+              - { name: "excerpt_en", label: "Excerpt (EN)", widget: "text" }
+              - { name: "body_nl", label: "Inhoud (NL)", widget: "markdown" }
+              - { name: "body_en", label: "Body (EN)", widget: "markdown" }
+
+  # ----- Site-teksten -----
+  - name: "site"
+    label: "Sitetekst"
+    description: "Alle vaste teksten van de site — hero, navigatie, footer, Over-pagina, contact."
+    files:
+
+      - file: "content/site.json"
+        name: "branding"
+        label: "1. Naam & marginalia"
+        fields:
+          - { name: "brand", label: "Naam (linksboven)", widget: "string" }
+          - name: "marginalia"
+            label: "Marginalia (de kleine tekst bovenaan elke pagina)"
+            widget: "object"
+            fields:
+              - { name: "left_nl", label: "Linksboven (NL)", widget: "string" }
+              - { name: "left_en", label: "Linksboven (EN)", widget: "string" }
+              - { name: "right_nl", label: "Rechtsboven (NL)", widget: "string" }
+              - { name: "right_en", label: "Rechtsboven (EN)", widget: "string" }
+          - name: "nav"
+            label: "Menu-labels"
+            widget: "object"
+            fields:
+              - { name: "home_nl", label: "Home (NL)", widget: "string" }
+              - { name: "home_en", label: "Home (EN)", widget: "string" }
+              - { name: "writing_nl", label: "Schrijven (NL)", widget: "string" }
+              - { name: "writing_en", label: "Writing (EN)", widget: "string" }
+              - { name: "work_nl", label: "Werk (NL)", widget: "string" }
+              - { name: "work_en", label: "Work (EN)", widget: "string" }
+              - { name: "about_nl", label: "Over (NL)", widget: "string" }
+              - { name: "about_en", label: "About (EN)", widget: "string" }
+              - { name: "contact_nl", label: "Contact (NL)", widget: "string" }
+              - { name: "contact_en", label: "Contact (EN)", widget: "string" }
+          - name: "footer"
+            label: "Footer"
+            widget: "object"
+            fields:
+              - { name: "copyright_nl", label: "Copyright (NL)", widget: "string" }
+              - { name: "copyright_en", label: "Copyright (EN)", widget: "string" }
+              - { name: "quote_nl", label: "Quote (NL)", widget: "string", hint: "Het citaat onderaan elke pagina." }
+              - { name: "quote_en", label: "Quote (EN)", widget: "string" }
+              - { name: "contactLink_nl", label: "Contact-link (NL)", widget: "string" }
+              - { name: "contactLink_en", label: "Contact-link (EN)", widget: "string" }
+          - { name: "home", widget: "object", required: false, fields: [{ name: "placeholder", widget: "hidden", default: "" }] }
+          - { name: "writing", widget: "object", required: false, fields: [{ name: "placeholder", widget: "hidden", default: "" }] }
+          - { name: "work", widget: "object", required: false, fields: [{ name: "placeholder", widget: "hidden", default: "" }] }
+          - { name: "about", widget: "object", required: false, fields: [{ name: "placeholder", widget: "hidden", default: "" }] }
+          - { name: "contact", widget: "object", required: false, fields: [{ name: "placeholder", widget: "hidden", default: "" }] }
+          - { name: "labels", widget: "object", required: false, fields: [{ name: "placeholder", widget: "hidden", default: "" }] }
+
+      - file: "content/site.json"
+        name: "home"
+        label: "2. Homepage"
+        fields:
+          - { name: "brand", widget: "hidden" }
+          - { name: "marginalia", widget: "hidden" }
+          - { name: "nav", widget: "hidden" }
+          - { name: "footer", widget: "hidden" }
+          - name: "home"
+            label: "Homepage"
+            widget: "object"
+            fields:
+              - { name: "eyebrow_nl", label: "Bovenregel (NL)", widget: "string" }
+              - { name: "eyebrow_en", label: "Eyebrow (EN)", widget: "string" }
+              - { name: "heroHeadline_nl", label: "Grote kop (NL)", widget: "text", hint: "Gebruik <em>woord</em> voor een schuingedrukt accent in oxbloed." }
+              - { name: "heroHeadline_en", label: "Hero headline (EN)", widget: "text" }
+              - { name: "heroSub_nl", label: "Ondertitel (NL)", widget: "text" }
+              - { name: "heroSub_en", label: "Hero sub (EN)", widget: "text" }
+              - { name: "introHeading_nl", label: "Intro-kop (NL)", widget: "string" }
+              - { name: "introHeading_en", label: "Intro heading (EN)", widget: "string" }
+              - { name: "introBody_nl", label: "Intro-tekst (NL)", widget: "markdown" }
+              - { name: "introBody_en", label: "Intro body (EN)", widget: "markdown" }
+              - { name: "featuredHeading_nl", label: "Uitgelichte essays kop (NL)", widget: "string" }
+              - { name: "featuredHeading_en", label: "Featured heading (EN)", widget: "string" }
+              - { name: "featuredAllLink_nl", label: "Alle-essays link (NL)", widget: "string" }
+              - { name: "featuredAllLink_en", label: "All essays link (EN)", widget: "string" }
+              - { name: "whatIDoHeading_nl", label: "Wat-ik-doe kop (NL)", widget: "string" }
+              - { name: "whatIDoHeading_en", label: "What-I-do heading (EN)", widget: "string" }
+              - { name: "block1_title_nl", label: "Blok 1 titel (NL)", widget: "string" }
+              - { name: "block1_title_en", label: "Block 1 title (EN)", widget: "string" }
+              - { name: "block1_body_nl", label: "Blok 1 tekst (NL)", widget: "text" }
+              - { name: "block1_body_en", label: "Block 1 body (EN)", widget: "text" }
+              - { name: "block2_title_nl", label: "Blok 2 titel (NL)", widget: "string" }
+              - { name: "block2_title_en", label: "Block 2 title (EN)", widget: "string" }
+              - { name: "block2_body_nl", label: "Blok 2 tekst (NL)", widget: "text" }
+              - { name: "block2_body_en", label: "Block 2 body (EN)", widget: "text" }
+              - { name: "block3_title_nl", label: "Blok 3 titel (NL)", widget: "string" }
+              - { name: "block3_title_en", label: "Block 3 title (EN)", widget: "string" }
+              - { name: "block3_body_nl", label: "Blok 3 tekst (NL)", widget: "text" }
+              - { name: "block3_body_en", label: "Block 3 body (EN)", widget: "text" }
+              - { name: "block4_title_nl", label: "Blok 4 titel (NL)", widget: "string" }
+              - { name: "block4_title_en", label: "Block 4 title (EN)", widget: "string" }
+              - { name: "block4_body_nl", label: "Blok 4 tekst (NL)", widget: "text" }
+              - { name: "block4_body_en", label: "Block 4 body (EN)", widget: "text" }
+          - { name: "writing", widget: "hidden" }
+          - { name: "work", widget: "hidden" }
+          - { name: "about", widget: "hidden" }
+          - { name: "contact", widget: "hidden" }
+          - { name: "labels", widget: "hidden" }
+
+      - file: "content/site.json"
+        name: "about"
+        label: "3. Over-pagina"
+        fields:
+          - { name: "brand", widget: "hidden" }
+          - { name: "marginalia", widget: "hidden" }
+          - { name: "nav", widget: "hidden" }
+          - { name: "footer", widget: "hidden" }
+          - { name: "home", widget: "hidden" }
+          - { name: "writing", widget: "hidden" }
+          - { name: "work", widget: "hidden" }
+          - name: "about"
+            label: "Over-pagina"
+            widget: "object"
+            fields:
+              - { name: "eyebrow_nl", label: "Bovenregel (NL)", widget: "string" }
+              - { name: "eyebrow_en", label: "Eyebrow (EN)", widget: "string" }
+              - { name: "title_nl", label: "Titel (NL)", widget: "string" }
+              - { name: "title_en", label: "Title (EN)", widget: "string" }
+              - { name: "portraitImage", label: "Portretfoto", widget: "image", required: false, hint: "Upload je foto. Hij verschijnt rechts op de Over-pagina." }
+              - { name: "portraitCaption_nl", label: "Foto-bijschrift (NL)", widget: "string" }
+              - { name: "portraitCaption_en", label: "Photo caption (EN)", widget: "string" }
+              - { name: "whoIAm_nl", label: "Wie ik ben (NL)", widget: "markdown" }
+              - { name: "whoIAm_en", label: "Who I am (EN)", widget: "markdown" }
+              - { name: "whatIDoHeading_nl", label: "Wat ik doe — kop (NL)", widget: "string" }
+              - { name: "whatIDoHeading_en", label: "What I do — heading (EN)", widget: "string" }
+              - { name: "whatIDoBody_nl", label: "Wat ik doe — tekst (NL)", widget: "markdown" }
+              - { name: "whatIDoBody_en", label: "What I do — body (EN)", widget: "markdown" }
+              - { name: "whatIDoneHeading_nl", label: "Wat ik heb gedaan — kop (NL)", widget: "string" }
+              - { name: "whatIDoneHeading_en", label: "What I've done — heading (EN)", widget: "string" }
+              - { name: "whatIDoneBody_nl", label: "Wat ik heb gedaan — tekst (NL)", widget: "markdown" }
+              - { name: "whatIDoneBody_en", label: "What I've done — body (EN)", widget: "markdown" }
+              - { name: "closing_nl", label: "Afsluitende regel (NL)", widget: "string" }
+              - { name: "closing_en", label: "Closing line (EN)", widget: "string" }
+          - { name: "contact", widget: "hidden" }
+          - { name: "labels", widget: "hidden" }
+
+      - file: "content/site.json"
+        name: "work"
+        label: "4. Werk-pagina"
+        fields:
+          - { name: "brand", widget: "hidden" }
+          - { name: "marginalia", widget: "hidden" }
+          - { name: "nav", widget: "hidden" }
+          - { name: "footer", widget: "hidden" }
+          - { name: "home", widget: "hidden" }
+          - { name: "writing", widget: "hidden" }
+          - name: "work"
+            label: "Werk-pagina"
+            widget: "object"
+            fields:
+              - { name: "eyebrow_nl", label: "Bovenregel (NL)", widget: "string" }
+              - { name: "eyebrow_en", label: "Eyebrow (EN)", widget: "string" }
+              - { name: "title_nl", label: "Titel (NL)", widget: "string" }
+              - { name: "title_en", label: "Title (EN)", widget: "string" }
+              - { name: "intro_nl", label: "Intro (NL)", widget: "text" }
+              - { name: "intro_en", label: "Intro (EN)", widget: "text" }
+              - name: "cases"
+                label: "Cases / opdrachten"
+                label_singular: "Case"
+                widget: "list"
+                summary: "{{fields.title_en}} ({{fields.years_en}})"
+                fields:
+                  - { name: "years_nl", label: "Jaren (NL)", widget: "string" }
+                  - { name: "years_en", label: "Years (EN)", widget: "string" }
+                  - { name: "title_nl", label: "Naam (NL)", widget: "string" }
+                  - { name: "title_en", label: "Name (EN)", widget: "string" }
+                  - { name: "role_nl", label: "Rol (NL)", widget: "string" }
+                  - { name: "role_en", label: "Role (EN)", widget: "string" }
+                  - { name: "body_nl", label: "Beschrijving (NL)", widget: "markdown" }
+                  - { name: "body_en", label: "Description (EN)", widget: "markdown" }
+                  - { name: "linkUrl", label: "Link URL (optioneel)", widget: "string", required: false }
+                  - { name: "linkText_nl", label: "Link tekst (NL)", widget: "string", required: false }
+                  - { name: "linkText_en", label: "Link text (EN)", widget: "string", required: false }
+          - { name: "about", widget: "hidden" }
+          - { name: "contact", widget: "hidden" }
+          - { name: "labels", widget: "hidden" }
+
+      - file: "content/site.json"
+        name: "writing-page"
+        label: "5. Schrijven-pagina (intro)"
+        fields:
+          - { name: "brand", widget: "hidden" }
+          - { name: "marginalia", widget: "hidden" }
+          - { name: "nav", widget: "hidden" }
+          - { name: "footer", widget: "hidden" }
+          - { name: "home", widget: "hidden" }
+          - name: "writing"
+            label: "Schrijven-pagina"
+            widget: "object"
+            fields:
+              - { name: "eyebrow_nl", label: "Bovenregel (NL)", widget: "string" }
+              - { name: "eyebrow_en", label: "Eyebrow (EN)", widget: "string" }
+              - { name: "title_nl", label: "Titel (NL)", widget: "string" }
+              - { name: "title_en", label: "Title (EN)", widget: "string" }
+              - { name: "intro_nl", label: "Intro (NL)", widget: "text" }
+              - { name: "intro_en", label: "Intro (EN)", widget: "text" }
+              - { name: "filterAll_nl", label: "Filter 'Alle' (NL)", widget: "string" }
+              - { name: "filterAll_en", label: "Filter 'All' (EN)", widget: "string" }
+          - { name: "work", widget: "hidden" }
+          - { name: "about", widget: "hidden" }
+          - { name: "contact", widget: "hidden" }
+          - { name: "labels", widget: "hidden" }
+
+      - file: "content/site.json"
+        name: "contact"
+        label: "6. Contact-pagina"
+        fields:
+          - { name: "brand", widget: "hidden" }
+          - { name: "marginalia", widget: "hidden" }
+          - { name: "nav", widget: "hidden" }
+          - { name: "footer", widget: "hidden" }
+          - { name: "home", widget: "hidden" }
+          - { name: "writing", widget: "hidden" }
+          - { name: "work", widget: "hidden" }
+          - { name: "about", widget: "hidden" }
+          - name: "contact"
+            label: "Contact-pagina"
+            widget: "object"
+            fields:
+              - { name: "eyebrow_nl", label: "Bovenregel (NL)", widget: "string" }
+              - { name: "eyebrow_en", label: "Eyebrow (EN)", widget: "string" }
+              - { name: "title_nl", label: "Titel (NL)", widget: "string" }
+              - { name: "title_en", label: "Title (EN)", widget: "string" }
+              - { name: "intro_nl", label: "Intro (NL)", widget: "text" }
+              - { name: "intro_en", label: "Intro (EN)", widget: "text" }
+              - name: "items"
+                label: "Contactgegevens"
+                label_singular: "Contactregel"
+                widget: "list"
+                summary: "{{fields.label_en}} — {{fields.value}}"
+                fields:
+                  - { name: "label_nl", label: "Label (NL)", widget: "string" }
+                  - { name: "label_en", label: "Label (EN)", widget: "string" }
+                  - { name: "value", label: "Waarde (bv. e-mailadres)", widget: "string" }
+                  - { name: "href", label: "Link (bv. mailto:... of https://...)", widget: "string" }
+          - { name: "labels", widget: "hidden" }

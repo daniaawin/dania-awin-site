@@ -1,0 +1,43 @@
+{
+  "articles": [
+    {
+      "slug": "reloading-decolonisation-blockchain",
+      "date": "2022-08-31",
+      "featured": true,
+      "category_nl": "Tech & Macht",
+      "category_en": "Tech & Power",
+      "title_nl": "Reloading: dekoloniale narratieven binnen de blockchain",
+      "title_en": "Reloading: decolonial narratives within the blockchain",
+      "excerpt_nl": "Een onderzoek naar hoe de NFT-tentoonstelling Reloading zich verhoudt tot dekoloniale narratieven binnen blockchain-technologie. Ontmantelt of reproduceert deze technologie bestaande machtsstructuren?",
+      "excerpt_en": "Research into how the NFT exhibition Reloading engages with decolonial narratives within blockchain technology. Does this technology dismantle or reproduce existing power structures?",
+      "body_nl": "*Een uittreksel uit mijn masterthesis aan de Universiteit van Amsterdam, New Media & Digital Culture, 2022.*\n\nSinds de doorbraak van non-fungible tokens — kortweg NFT's — in 2021 is er een verhaal in omloop dat klinkt als een belofte. De technologie zou digitale kunstenaars eindelijk de mogelijkheid geven om hun werk te verkopen zonder tussenkomst van galeries, veilinghuizen of de traditionele poortwachters van de kunstwereld.\n\nHet klinkt utopisch. En precies daarom is het de moeite waard om er een stap dichterbij te kijken.\n\n## De onderzoeksvraag\n\nIn mijn thesis stel ik de vraag: hoe verhoudt het NFT-project *Reloading* — een samenwerking tussen ART X Lagos en het NFT-platform SuperRare — zich tot dekoloniale narratieven die gekleurd worden door blockchain-imaginaries? Anders gezegd: wat doen Afrikaanse kunstenaars met deze technologie, en wat doet de technologie met hen?\n\n## Wat blockchain wel en niet doet\n\nEen van de meest taaie misverstanden over blockchain is dat het inherent decentraal zou zijn. Dat is afhankelijk van het soort blockchain. *Permissionless* blockchains zijn open voor iedereen. *Permissioned* blockchains hebben poortwachters, en het zijn juist die laatste die door overheden en grote bedrijven worden omarmd.\n\n## Wat blijft hangen\n\nWat ik aan deze thesis heb overgehouden is geen conclusie maar een methode. De vraag is niet *\"is deze technologie goed of slecht?\"*. De vraag is: welke machtsverhoudingen lopen er op dit moment door deze technologie heen, wie heeft daar baat bij, en wie wordt erin gevangen?\n\n---\n\n*De volledige thesis is op aanvraag beschikbaar. Stuur een mail naar* [d.awin@live.nl](mailto:d.awin@live.nl).",
+      "body_en": "*An excerpt from my master's thesis at the University of Amsterdam, New Media & Digital Culture, 2022.*\n\nSince the breakthrough of non-fungible tokens — NFTs for short — in 2021, a story has circulated that sounds like a promise. The technology would finally allow digital artists to sell their work without intermediaries — without galleries, auction houses, or the traditional gatekeepers of the art world.\n\nIt sounds utopian. Which is exactly why it's worth looking closer.\n\n## The research question\n\nIn my thesis I ask: how does the NFT project *Reloading* — a collaboration between ART X Lagos and the NFT marketplace SuperRare — engage with decolonial narratives coloured by blockchain imaginaries? In other words: what are African artists doing with this technology, and what is the technology doing to them?\n\n## What blockchain does and doesn't do\n\nOne of the stickiest misunderstandings about blockchain is that it is inherently decentralised. That depends on the kind of blockchain. *Permissionless* blockchains are open to everyone. *Permissioned* blockchains have gatekeepers — and it is precisely the latter that governments and large corporations have embraced.\n\n## What stays with me\n\nWhat I took from this thesis is not a conclusion but a method. The question is not *\"is this technology good or bad?\"*. The question is: which power relations are currently running through this technology, who benefits, and who is caught in it?\n\n---\n\n*The full thesis is available on request. Send an email to* [d.awin@live.nl](mailto:d.awin@live.nl)."
+    },
+    {
+      "slug": "inclusion-becomes-language",
+      "date": "2025-03-15",
+      "featured": true,
+      "category_nl": "Inclusie",
+      "category_en": "Inclusion",
+      "title_nl": "Wanneer inclusie taal wordt en stopt bij macht",
+      "title_en": "When inclusion becomes language and stops at power",
+      "excerpt_nl": "Over organisaties die de taal van diversiteit overnemen, zonder hun hiërarchieën los te laten.",
+      "excerpt_en": "On institutions that speak the language of diversity while keeping their hierarchies.",
+      "body_nl": "> **Voorbeeld-artikel.** Vervang met je eigen tekst — bijvoorbeeld het volledige essay zoals dat op je Substack staat.\n\nIn bijna elke institutie waar ik de afgelopen jaren heb gewerkt, gebeurt hetzelfde. Het woord *inclusie* doet zijn intrede. Er wordt een commissie opgericht. Een strategie geschreven. Een functietitel bedacht. En dan — als de taal eenmaal binnen is — lijkt het werk gedaan.\n\nMaar er gebeurt iets vreemds. De woorden zitten in de PowerPoint, en de macht zit waar ze altijd al zat.\n\n## Taal als prestatie\n\nWat veel organisaties doen onder de noemer van diversiteit en inclusie is geen verandering. Het is performatie. De juiste woorden worden gesproken, de juiste rapporten geschreven, de juiste consulenten ingehuurd. Maar de structuur — wie beslist, wie betaald wordt, wie tekent — verschuift niet.",
+      "body_en": "> **Sample article.** Replace with your own text — for instance the full essay as it appears on your Substack.\n\nIn nearly every institution I've worked with over the past years, the same thing happens. The word *inclusion* enters. A committee is formed. A strategy written. A job title invented. And then — once the language is inside — the work appears to be done.\n\nBut something strange happens. The words sit in the PowerPoint, and the power sits where it always sat.\n\n## Language as performance\n\nWhat many organisations do under the banner of diversity and inclusion is not change. It is performance. The right words get spoken, the right reports written, the right consultants hired. But the structure — who decides, who is paid, who signs — does not move."
+    },
+    {
+      "slug": "voorbeeld-sjabloon",
+      "date": "2026-01-10",
+      "featured": false,
+      "category_nl": "Instituties",
+      "category_en": "Institutions",
+      "title_nl": "Sjabloon voor een nieuw essay",
+      "title_en": "Template for a new essay",
+      "excerpt_nl": "Korte tekst van twee à drie regels die op de archief-pagina onder de titel verschijnt.",
+      "excerpt_en": "Two or three lines that appear under the title on the archive page.",
+      "body_nl": "Dit is het sjabloon-artikel. In de CMS kun je dit verwijderen of vervangen door je eigen tekst.\n\nGebruik tussenkopjes met `##`, italic met `*sterretjes*`, vet met `**dubbele sterretjes**`. Witregels tussen alinea's zijn nieuwe alinea's.",
+      "body_en": "This is the template article. In the CMS you can delete this or replace it with your own text.\n\nUse sub-headings with `##`, italic with `*asterisks*`, bold with `**double asterisks**`. Empty lines between paragraphs separate them."
+    }
+  ]
+}

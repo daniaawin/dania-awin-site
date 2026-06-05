@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Dania Awin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=EB+Garamond:ital,wght@0,400..600;1,400..500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="lang-en">
+
+  <header>
+    <div class="marginalia">
+      <div class="left" data-c="marginalia.left"></div>
+      <div class="center"></div>
+      <div class="right" data-c="marginalia.right"></div>
+    </div>
+
+    <nav class="nav wrap">
+      <a href="index.html" class="nav__brand" data-c="brand"></a>
+      <div class="nav__links">
+        <a href="index.html" data-c="nav.home"></a>
+        <a href="writing.html" data-c="nav.writing"></a>
+        <a href="work.html" data-c="nav.work"></a>
+        <a href="about.html" data-c="nav.about"></a>
+        <a href="contact.html" class="is-active" data-c="nav.contact"></a>
+        <button class="nav__lang" id="langToggle" aria-label="Toggle language">
+          <span data-lang="nl">NL</span><span class="divider">/</span><span data-lang="en">EN</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <section class="contact">
+      <div class="eyebrow" data-c="contact.eyebrow"></div>
+      <h1 class="display" style="margin-top: 1.5rem;" data-c="contact.title"></h1>
+      <p class="archive-intro" style="margin-top: 2rem;" data-c="contact.intro"></p>
+      <dl id="contact-items"></dl>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="left" data-c="footer.copyright"></div>
+    <div class="center" data-c="footer.quote"></div>
+    <div class="right">
+      <a href="index.html" data-c="labels.backToHome"></a>
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

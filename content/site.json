@@ -1,0 +1,207 @@
+{
+  "brand": "Dania Awin",
+
+  "marginalia": {
+    "left_nl": "Dania Awin — Essays & Research",
+    "left_en": "Dania Awin — Essays & Research",
+    "right_nl": "Over technologie, macht en instituties",
+    "right_en": "On technology, power and institutions"
+  },
+
+  "nav": {
+    "home_nl": "Home",     "home_en": "Home",
+    "writing_nl": "Schrijven", "writing_en": "Writing",
+    "work_nl": "Werk",     "work_en": "Work",
+    "about_nl": "Over",    "about_en": "About",
+    "contact_nl": "Contact", "contact_en": "Contact"
+  },
+
+  "footer": {
+    "copyright_nl": "© 2026 Dania Awin · Amsterdam",
+    "copyright_en": "© 2026 Dania Awin · Amsterdam",
+    "quote_nl": "\"Welke woorden heb je nog niet?\" — Audre Lorde",
+    "quote_en": "\"What are the words you do not have yet?\" — Audre Lorde",
+    "contactLink_nl": "Contact",
+    "contactLink_en": "Contact"
+  },
+
+  "home": {
+    "eyebrow_nl": "Onderzoek · Strategisch advies · Schrijven",
+    "eyebrow_en": "Research · Strategic advisory · Writing",
+    "heroHeadline_nl": "Onderzoek en strategisch advies. Over technologie, <em>macht</em> en hoe instituties veranderen.",
+    "heroHeadline_en": "Research and strategic advisory. On technology, <em>power</em>, and how institutions actually change.",
+    "heroSub_nl": "Ik help organisaties zien hoe macht zich verstopt in hun eigen structuren. En wat ze concreet kunnen doen om dat te verschuiven.",
+    "heroSub_en": "I help organisations see how power hides inside their own structures. And what they can do, concretely, to shift it.",
+
+    "introHeading_nl": "Korte intro",
+    "introHeading_en": "Brief intro",
+    "introBody_nl": "Ik ben Dania Awin. Strategisch adviseur en onderzoeker, met een MA New Media & Digital Culture van de UvA. De afgelopen tien jaar werkte ik op de grens van beweging en instituut — van het mede-oprichten van University of Colour tot adviesrollen bij Amnesty International, Soho House en de Willem de Kooning Academie.\n\nWat me bezighoudt: het verschil tussen wat een organisatie zegt en hoe ze handelt. Daar zit mijn werk.",
+    "introBody_en": "I'm Dania Awin. Strategic advisor and researcher, with an MA in New Media & Digital Culture from the University of Amsterdam. For the past decade I've worked at the edge between grassroots movement and institutional practice — from co-founding University of Colour to advisory roles at Amnesty International, Soho House and the Willem de Kooning Academy.\n\nWhat I keep returning to: the gap between what an organisation says and how it acts. That's where my work lives.",
+
+    "featuredHeading_nl": "Uitgelichte essays",
+    "featuredHeading_en": "Featured essays",
+    "featuredAllLink_nl": "Alle essays →",
+    "featuredAllLink_en": "All essays →",
+
+    "whatIDoHeading_nl": "Wat ik doe",
+    "whatIDoHeading_en": "What I do",
+
+    "block1_title_nl": "Onderzoek",
+    "block1_title_en": "Research",
+    "block1_body_nl": "Ik onderzoek instituties, beleid en technologie. En vertaal dat naar inzichten die je kunt gebruiken — geen rapporten die in een la verdwijnen.",
+    "block1_body_en": "I study institutions, policy and technology. And translate that into insight you can actually use — not reports that disappear into a drawer.",
+
+    "block2_title_nl": "Strategisch advies",
+    "block2_title_en": "Strategic advisory",
+    "block2_body_nl": "Begeleiding rond inclusie, sociale veiligheid en cultuurverandering. Niet als project met een eindstreep. Als iets dat blijft.",
+    "block2_body_en": "Guidance on inclusion, social safety and cultural change. Not a project with a finish line. Something that stays.",
+
+    "block3_title_nl": "Schrijven",
+    "block3_title_en": "Writing",
+    "block3_body_nl": "Essays en publiek onderzoek. Over macht, technologie en de instituties die ze vormgeven. Soms academisch, soms persoonlijk.",
+    "block3_body_en": "Essays and public research. On power, technology and the institutions that shape them. Sometimes academic, sometimes personal.",
+
+    "block4_title_nl": "Facilitatie",
+    "block4_title_en": "Facilitation",
+    "block4_body_nl": "Gesprekken voeren tussen directies, teams en gemeenschappen. Vooral over wat meestal ongezegd blijft.",
+    "block4_body_en": "Conversations between leadership, teams and communities. Mostly about what tends to go unsaid."
+  },
+
+  "writing": {
+    "eyebrow_nl": "Essays & publiek onderzoek",
+    "eyebrow_en": "Essays & public research",
+    "title_nl": "<em>Schrijven.</em>",
+    "title_en": "<em>Writing.</em>",
+    "intro_nl": "Over inclusie, macht en de instituties die ze proberen vorm te geven. Soms academisch, soms persoonlijk. Altijd geworteld in onderzoek en praktijk.",
+    "intro_en": "On inclusion, power and the institutions that try to shape them. Sometimes academic, sometimes personal. Always grounded in research and practice.",
+    "filterAll_nl": "Alle",
+    "filterAll_en": "All"
+  },
+
+  "work": {
+    "eyebrow_nl": "Geselecteerd werk",
+    "eyebrow_en": "Selected work",
+    "title_nl": "Het <em>werk.</em>",
+    "title_en": "The <em>work.</em>",
+    "intro_nl": "Een handvol opdrachten en projecten die laten zien waar mijn werk aan raakt. Niet alle logo's — wel context.",
+    "intro_en": "A handful of projects and engagements that show what my work touches. Not all the logos — context instead.",
+    "cases": [
+      {
+        "years_nl": "2023 — 2025", "years_en": "2023 — 2025",
+        "title_nl": "Amnesty International", "title_en": "Amnesty International",
+        "role_nl": "Content Manager & Strategisch Adviseur D&I",
+        "role_en": "Content Manager & Strategic Advisor on D&I",
+        "body_nl": "Bouwde een organisatiebrede content- en communicatiestrategie tijdens interne spanning rond diversiteit en de bestaande achterban. Het werk vertrok vanuit publieksonderzoek, zodat zowel oude als nieuwe doelgroepen zich konden vinden. De strategie wordt nog steeds gebruikt.",
+        "body_en": "Built an organisation-wide content and communication strategy during a moment of internal tension around diversity and the existing donor base. Grounded in audience research, so both existing and new publics could find their footing. The strategy is still in use.",
+        "linkUrl": "",
+        "linkText_nl": "",
+        "linkText_en": ""
+      },
+      {
+        "years_nl": "2023 — heden", "years_en": "2023 — present",
+        "title_nl": "Soho House & Co", "title_en": "Soho House & Co",
+        "role_nl": "Global Diversity & Inclusion Board Member",
+        "role_en": "Global Diversity & Inclusion Board Member",
+        "body_nl": "Werk samen met de Global Director DEI aan internationale strategieën rond sociale veiligheid, representatie en inclusieve hospitality. Zette een programma op dat dertig professionals met een gemarginaliseerde achtergrond verbond — wat overbleef is een community die zichzelf draagt.",
+        "body_en": "Working with the Global Director DEI on international strategies around social safety, representation and inclusive hospitality. Built a programme that connected thirty professionals from underrepresented backgrounds — what remained is a community that holds itself.",
+        "linkUrl": "",
+        "linkText_nl": "",
+        "linkText_en": ""
+      },
+      {
+        "years_nl": "2015 — heden", "years_en": "2015 — present",
+        "title_nl": "University of Colour", "title_en": "University of Colour",
+        "role_nl": "Medeoprichter & projectleider",
+        "role_en": "Co-founder & project lead",
+        "body_nl": "Grassroots-organisatie die academisch beleid, onderwijs en publiek debat blijvend heeft beïnvloed rond dekolonisatie. Meer dan twintig projecten, gesprekken tussen studenten, docenten en bestuurders, en een bijdrage aan de oprichting van de diversiteitscommissie van de UvA.",
+        "body_en": "A grassroots organisation that has shaped academic policy, teaching and public debate on decolonisation. More than twenty projects, dialogue between students, faculty and leadership, and a contribution to the formation of the diversity committee at the University of Amsterdam.",
+        "linkUrl": "",
+        "linkText_nl": "",
+        "linkText_en": ""
+      },
+      {
+        "years_nl": "2022 — 2023", "years_en": "2022 — 2023",
+        "title_nl": "Willem de Kooning Academie", "title_en": "Willem de Kooning Academy",
+        "role_nl": "Adviseur diversiteit & sociale veiligheid",
+        "role_en": "Advisor on diversity & social safety",
+        "body_nl": "Begeleidde gesprekken tussen studenten, docenten en bestuur rond sociale veiligheid en inclusie in het kunstvakonderwijs. Werk gericht op het zichtbaar maken van wat normaal ongezegd blijft, en op het bouwen van een gedragen vervolg.",
+        "body_en": "Facilitated conversations between students, faculty and leadership on social safety and inclusion in art education. Work focused on surfacing what tends to remain unsaid, and on building a follow-up the organisation could carry.",
+        "linkUrl": "",
+        "linkText_nl": "",
+        "linkText_en": ""
+      },
+      {
+        "years_nl": "2022", "years_en": "2022",
+        "title_nl": "<em>Navigating Narratives of Decolonisation within Blockchain Imaginaries</em>",
+        "title_en": "<em>Navigating Narratives of Decolonisation within Blockchain Imaginaries</em>",
+        "role_nl": "Masterthesis · Universiteit van Amsterdam",
+        "role_en": "Master's thesis · University of Amsterdam",
+        "body_nl": "Onderzoek naar hoe de NFT-tentoonstelling <em>Reloading</em> zich verhoudt tot dekoloniale narratieven binnen blockchain-technologie. De vraag: ontmantelt deze technologie bestaande machtsstructuren, of reproduceert ze die juist?",
+        "body_en": "Research into how the NFT exhibition <em>Reloading</em> engages with decolonial narratives within blockchain technology. The question: does this technology dismantle existing power structures, or quietly reproduce them?",
+        "linkUrl": "article.html?slug=reloading-decolonisation-blockchain",
+        "linkText_nl": "Lees het essay →",
+        "linkText_en": "Read the essay →"
+      }
+    ]
+  },
+
+  "about": {
+    "eyebrow_nl": "Wie ik ben — wat ik doe — wat ik heb gedaan",
+    "eyebrow_en": "Who I am — what I do — what I've done",
+    "title_nl": "Over <em>mij.</em>",
+    "title_en": "About <em>me.</em>",
+
+    "portraitImage": "/dania-portrait.jpg",
+    "portraitCaption_nl": "Amsterdam, 2026",
+    "portraitCaption_en": "Amsterdam, 2026",
+
+    "whoIAm_nl": "Mijn werk begon niet binnen instituties. Als student was ik onderdeel van University of Colour — een grassroots-beweging gericht op het dekoloniseren van het curriculum. We werkten samen met universiteiten, musea en culturele instellingen. Maar ik was wantrouwig naar wat er binnen gebeurde. Ik geloofde niet dat verandering kon komen uit dezelfde structuren die het probleem hadden gemaakt.\n\nJaren later leerde ik die structuren wel van binnenuit kennen. Bij Amnesty International, de Willem de Kooning Academie, Soho House. En ik zag hoe vertrouwd die logica is. Mensen spreken met overtuiging over rechtvaardigheid, terwijl de organisatie haar oude vorm vasthoudt. Dat verschil tussen woord en daad — daar zit mijn werk.\n\nIk combineer academische diepgang (MA New Media & Digital Culture, Universiteit van Amsterdam) met grassroots-praktijk. Goede analyse hoeft niet abstract te worden. Goede strategie hoeft niet bij oppervlakkige verandering te blijven. Ik probeer daar tussenin te gaan zitten. Vragen serieus nemen. Niet bang zijn voor wrijving.",
+    "whoIAm_en": "My work didn't begin inside institutions. As a student I was part of University of Colour — a grassroots movement focused on decolonising the curriculum. We worked alongside universities, museums and cultural institutions. But I was wary of what happened on the inside. I didn't believe change could come from the same structures that had produced the problem.\n\nYears later I came to know those structures from within. At Amnesty International, the Willem de Kooning Academy, Soho House. And I saw how familiar the logic was. People speak with conviction about justice, while the organisation holds onto its old shape. That gap between word and act — that's where my work sits.\n\nI combine academic depth (MA New Media & Digital Culture, University of Amsterdam) with grassroots practice. Good analysis doesn't have to turn abstract. Good strategy doesn't have to end in surface change. I try to sit in between. Take questions seriously. Not be afraid of friction.",
+
+    "whatIDoHeading_nl": "Wat ik doe",
+    "whatIDoHeading_en": "What I do",
+    "whatIDoBody_nl": "Mijn werk valt grofweg uiteen in vier vormen, die in de praktijk vaak in elkaar overlopen. *Onderzoek* — ik bestudeer instituties, beleid en technologie, en vertaal dat naar inzichten die organisaties kunnen gebruiken. *Strategisch advies* — begeleiding rond inclusie, sociale veiligheid en cultuurverandering, niet als project maar als blijvende verschuiving. *Schrijven* — essays en publiek onderzoek, soms academisch en soms persoonlijk. En *facilitatie* — gesprekken voeren tussen directies, teams en gemeenschappen, vooral over wat meestal ongezegd blijft.",
+    "whatIDoBody_en": "My work falls roughly into four forms that often run into one another in practice. *Research* — I study institutions, policy and technology, and translate that into insights organisations can use. *Strategic advisory* — guidance on inclusion, social safety and cultural change, not as a project but as a lasting shift. *Writing* — essays and public research, sometimes academic and sometimes personal. And *facilitation* — guiding conversations between leadership, teams and communities, mostly about what tends to stay unsaid.",
+
+    "whatIDoneHeading_nl": "Wat ik heb gedaan",
+    "whatIDoneHeading_en": "What I've done",
+    "whatIDoneBody_nl": "Bij **Amnesty International** bouwde ik tussen 2023 en 2025 een organisatiebrede content- en communicatiestrategie tijdens interne spanning rond diversiteit en de bestaande achterban. De strategie vertrok vanuit publieksonderzoek, zodat zowel oude als nieuwe doelgroepen zich konden vinden, en wordt nog steeds gebruikt.\n\nBij **Soho House & Co** werk ik sinds 2023 als Global Diversity & Inclusion Board Member samen met de Global Director DEI aan internationale strategieën rond sociale veiligheid, representatie en inclusieve hospitality. Ik zette een programma op dat dertig professionals met een gemarginaliseerde achtergrond verbond. Wat overbleef is een community die zichzelf draagt.\n\n**University of Colour** medeoprichtte ik in 2015. Een grassroots-organisatie die academisch beleid, onderwijs en publiek debat blijvend heeft beïnvloed rond dekolonisatie. Meer dan twintig projecten, gesprekken tussen studenten, docenten en bestuurders. Droeg bij aan de diversiteitscommissie van de UvA.\n\nMijn **masterthesis** aan de UvA (2022) onderzocht hoe de NFT-tentoonstelling *Reloading* zich verhoudt tot dekoloniale narratieven binnen blockchain-technologie. De centrale vraag: ontmantelt deze technologie bestaande machtsstructuren, of reproduceert ze die juist?\n\nDaarnaast ben ik bestuurslid bij de Merel Severs Theater Stichting en de Alumni Circle Media Studies van de UvA. Ik neem deel aan Leading Beyond Boundaries, een leiderschapsprogramma van de Gemeente Amsterdam rond transformatief leiderschap en systeemverandering.",
+    "whatIDoneBody_en": "At **Amnesty International**, between 2023 and 2025, I built an organisation-wide content and communication strategy during a moment of internal tension around diversity and the existing donor base. The strategy was grounded in audience research so both existing and new publics could find their footing, and it is still in use.\n\nAt **Soho House & Co**, since 2023, I have worked as a Global Diversity & Inclusion Board Member with the Global Director DEI on international strategies around social safety, representation and inclusive hospitality. I built a programme that connected thirty professionals from underrepresented backgrounds. What remained is a community that holds itself.\n\nI co-founded **University of Colour** in 2015. A grassroots organisation that has shaped academic policy, teaching and public debate on decolonisation. More than twenty projects, dialogue between students, faculty and leadership. Contributed to the formation of the diversity committee at the University of Amsterdam.\n\nMy **master's thesis** at the University of Amsterdam (2022) examined how the NFT exhibition *Reloading* engages with decolonial narratives within blockchain technology. The central question: does this technology dismantle existing power structures, or quietly reproduce them?\n\nAlongside this I serve on the board of the Merel Severs Theatre Foundation and the Media Studies Alumni Circle at the University of Amsterdam. I'm currently part of Leading Beyond Boundaries, a leadership programme of the City of Amsterdam focused on transformational leadership and systems change.",
+
+    "closing_nl": "Ik werk vanuit Amsterdam, in het Nederlands en het Engels.",
+    "closing_en": "I work from Amsterdam, in Dutch and English."
+  },
+
+  "contact": {
+    "eyebrow_nl": "Contact",
+    "eyebrow_en": "Contact",
+    "title_nl": "Voor opdrachten, gesprekken of <em>vragen.</em>",
+    "title_en": "For commissions, conversations or <em>questions.</em>",
+    "intro_nl": "Laat van je horen. Ik antwoord meestal binnen een paar werkdagen.",
+    "intro_en": "Get in touch. I usually reply within a few working days.",
+    "items": [
+      {
+        "label_nl": "E-mail", "label_en": "Email",
+        "value": "d.awin@live.nl",
+        "href": "mailto:d.awin@live.nl"
+      },
+      {
+        "label_nl": "LinkedIn", "label_en": "LinkedIn",
+        "value": "linkedin.com/in/daniaawin",
+        "href": "https://linkedin.com/in/daniaawin"
+      },
+      {
+        "label_nl": "Substack", "label_en": "Substack",
+        "value": "dawin.substack.com",
+        "href": "https://dawin.substack.com"
+      }
+    ]
+  },
+
+  "labels": {
+    "readMore_nl": "Lees →", "readMore_en": "Read →",
+    "backToHome_nl": "Terug naar home", "backToHome_en": "Back to home",
+    "backToArchive_nl": "← Alle essays", "backToArchive_en": "← All essays",
+    "essayNotFound_nl": "Essay niet gevonden", "essayNotFound_en": "Essay not found"
+  }
+}
