@@ -133,7 +133,7 @@
   function essayRowHTML(article, lang) {
     const readLabel = resolveContent("labels.readMore", lang) || (lang === "nl" ? "Lees →" : "Read →");
     return `
-      <a href="article.html?slug=${encodeURIComponent(article.slug)}" class="essay-row" data-slug="${article.slug}">
+      <a href="essays/${encodeURIComponent(article.slug)}" class="essay-row" data-slug="${article.slug}">
         <div class="essay-row__meta">
           ${formatDate(article.date, lang)}
           <span class="cat">${article.category[lang]}</span>
@@ -276,7 +276,58 @@
   /* ---------- Article page ---------- */
 
   function getSlugFromUrl() {
-    return new URLSearchParams(window.location.search).get("slug");
+    // Probeer eerst query-string (?slug=...), dan pad (/essays/slug)
+    const qs = new URLSearchParams(window.location.search).get("slug");
+    if (qs) return qs;
+    const m = window.location.pathname.match(/\/essays\/([^/?#]+)/);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+
+  function setMeta(name, content, attr) {
+    if (!content) return;
+    attr = attr || "name";
+    let el = document.querySelector(`meta[${attr}="${name}"]`);
+    if (!el) {
+      el = document.createElement("meta");
+      el.setAttribute(attr, name);
+      document.head.appendChild(el);
+    }
+    el.setAttribute("content", content);
+  }
+
+  function setCanonical(href) {
+    let el = document.querySelector('link[rel="canonical"]');
+    if (!el) {
+      el = document.createElement("link");
+      el.setAttribute("rel", "canonical");
+      document.head.appendChild(el);
+    }
+    el.setAttribute("href", href);
+  }
+
+  function injectArticleSchema(article, lang) {
+    const old = document.getElementById("article-schema");
+    if (old) old.remove();
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": article.title[lang],
+      "description": article.excerpt[lang],
+      "datePublished": article.date,
+      "dateModified": article.date,
+      "inLanguage": lang === "nl" ? "nl-NL" : "en-GB",
+      "author": { "@type": "Person", "name": "Dania Awin", "url": "https://daniaawin.com" },
+      "publisher": { "@type": "Person", "name": "Dania Awin", "url": "https://daniaawin.com" },
+      "mainEntityOfPage": `https://daniaawin.com/essays/${article.slug}`,
+      "image": "https://daniaawin.com/dania-hero.jpg",
+      "articleSection": article.category[lang],
+      "keywords": [article.category.en, article.category.nl].join(", ")
+    };
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.id = "article-schema";
+    s.textContent = JSON.stringify(schema);
+    document.head.appendChild(s);
   }
 
   function renderArticle() {
@@ -302,7 +353,20 @@
       return;
     }
 
-    document.title = `${article.title[lang]} — Dania Awin`;
+    // SEO: dynamische meta voor dit essay
+    const pageTitle = `${article.title[lang]} · Dania Awin`;
+    const pageDesc = article.excerpt[lang];
+    const pageUrl = `https://daniaawin.com/essays/${article.slug}`;
+    document.title = pageTitle;
+    setMeta("description", pageDesc);
+    setCanonical(pageUrl);
+    setMeta("og:title", pageTitle, "property");
+    setMeta("og:description", pageDesc, "property");
+    setMeta("og:url", pageUrl, "property");
+    setMeta("og:type", "article", "property");
+    setMeta("twitter:title", pageTitle);
+    setMeta("twitter:description", pageDesc);
+    injectArticleSchema(article, lang);
 
     const topMeta = document.getElementById("article-meta-top");
     if (topMeta) {

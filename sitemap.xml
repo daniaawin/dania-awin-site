@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://daniaawin.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://daniaawin.com/writing.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://daniaawin.com/about.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://daniaawin.com/work.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://daniaawin.com/contact.html</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://daniaawin.com/essays/inclusion-becomes-language</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://daniaawin.com/essays/reloading-decolonisation-blockchain</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://daniaawin.com/essays/accountability-as-an-act-of-love</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+</urlset>
