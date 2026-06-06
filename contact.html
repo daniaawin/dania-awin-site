@@ -91,10 +91,51 @@
       <div class="eyebrow" data-c="contact.eyebrow"></div>
       <h1 class="display" style="margin-top: 1.5rem;" data-c="contact.title"></h1>
       <p class="archive-intro" style="margin-top: 2rem;" data-c="contact.intro"></p>
-      <dl id="contact-items"></dl>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" action="/contact.html?sent=1">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden><label>Don't fill: <input name="bot-field" /></label></p>
+
+        <div class="field">
+          <label for="name"><span class="nl">Naam</span><span class="en">Name</span></label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="field">
+          <label for="subject"><span class="nl">Onderwerp</span><span class="en">Subject</span></label>
+          <input type="text" id="subject" name="subject" />
+        </div>
+        <div class="field">
+          <label for="message"><span class="nl">Bericht</span><span class="en">Message</span></label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="contact-submit">
+          <span class="nl">Verstuur</span><span class="en">Send</span>
+        </button>
+      </form>
+
+      <p id="contact-success" style="display:none; margin-top: 2rem; padding: 1.5rem; background: var(--bg-soft); border-left: 2px solid var(--moss); font-style: italic;">
+        <span class="nl">Bedankt voor je bericht. Ik antwoord meestal binnen een paar werkdagen.</span>
+        <span class="en">Thank you for your message. I usually reply within a few working days.</span>
+      </p>
+
+      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule);">
+        <p class="eyebrow" style="margin-bottom: 1.5rem;"><span class="nl">Of direct via</span><span class="en">Or directly via</span></p>
+        <dl id="contact-items"></dl>
+      </div>
     </section>
 
   </main>
+
+  <script>
+    if (new URLSearchParams(location.search).get('sent') === '1') {
+      document.getElementById('contact-success').style.display = 'block';
+      document.querySelector('.contact-form').style.display = 'none';
+    }
+  </script>
 
   <footer class="foot">
     <div class="left" data-c="footer.copyright"></div>

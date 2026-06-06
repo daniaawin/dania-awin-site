@@ -17,10 +17,12 @@
 
   function getLang() {
     try {
-      return localStorage.getItem("daw-lang") || DEFAULT_LANG;
-    } catch (e) {
-      return DEFAULT_LANG;
-    }
+      const saved = localStorage.getItem("daw-lang");
+      if (saved) return saved;
+    } catch (e) {}
+    // Auto-detect op basis van browser-taal
+    const browserLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+    return browserLang.startsWith("nl") ? "nl" : "en";
   }
 
   function setLang(lang) {
