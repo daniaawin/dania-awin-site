@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dania Awin — Essays &amp; Research</title>
+    <link>https://daniaawin.com</link>
+    <atom:link href="https://daniaawin.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Essays and public research on institutional power, technology and culture by Dania Awin.</description>
+    <language>en-gb</language>
+    <copyright>© Dania Awin</copyright>
+    <managingEditor>noreply@daniaawin.com (Dania Awin)</managingEditor>
+    <webMaster>noreply@daniaawin.com (Dania Awin)</webMaster>
+    <lastBuildDate>Sat, 06 Jun 2026 12:09:08 +0000</lastBuildDate>
+    <image>
+      <url>https://daniaawin.com/apple-touch-icon.png</url>
+      <title>Dania Awin</title>
+      <link>https://daniaawin.com</link>
+    </image>
+    <item>
+      <title><![CDATA[Accountability as an Act of Love]]></title>
+      <link>https://daniaawin.com/essays/accountability-as-an-act-of-love</link>
+      <guid isPermaLink="true">https://daniaawin.com/essays/accountability-as-an-act-of-love</guid>
+      <pubDate>Tue, 12 May 2026 12:00:00 +0000</pubDate>
+      <description><![CDATA[On the difference between punishment and accountability — and why holding someone to account with love can be one of the most tender forms of regard.]]></description>
+      <category>Culture</category>
+      <author>noreply@daniaawin.com (Dania Awin)</author>
+    </item>
+    <item>
+      <title><![CDATA[When inclusion becomes language and stops at power]]></title>
+      <link>https://daniaawin.com/essays/inclusion-becomes-language</link>
+      <guid isPermaLink="true">https://daniaawin.com/essays/inclusion-becomes-language</guid>
+      <pubDate>Wed, 08 Apr 2026 12:00:00 +0000</pubDate>
+      <description><![CDATA[On institutions that speak diversity and keep their hierarchies — and why DEI so often becomes language without redistribution of power.]]></description>
+      <category>Inclusion</category>
+      <author>noreply@daniaawin.com (Dania Awin)</author>
+    </item>
+    <item>
+      <title><![CDATA[Reloading: decolonial narratives within the blockchain]]></title>
+      <link>https://daniaawin.com/essays/reloading-decolonisation-blockchain</link>
+      <guid isPermaLink="true">https://daniaawin.com/essays/reloading-decolonisation-blockchain</guid>
+      <pubDate>Wed, 31 Aug 2022 12:00:00 +0000</pubDate>
+      <description><![CDATA[Research into how the NFT exhibition Reloading engages with decolonial narratives within blockchain technology. Does this technology dismantle or reproduce existing power structures?]]></description>
+      <category>Tech & Power</category>
+      <author>noreply@daniaawin.com (Dania Awin)</author>
+    </item>
+  </channel>
+</rss>
