@@ -60,4 +60,28 @@ ${items}
 `;
 fs.writeFileSync("rss.xml", rss);
 
-console.log(`✓ sitemap.xml + rss.xml gegenereerd voor ${sorted.length} essays`);
+// --- /essays/SLUG/index.html voor elke essay (echte bestanden, geen rewrite nodig) ---
+const articleTemplate = fs.readFileSync("article.html", "utf8");
+if (!fs.existsSync("essays")) fs.mkdirSync("essays");
+for (const a of sorted) {
+  const dir = `essays/${a.slug}`;
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  // Pas paden aan (één niveau dieper) en injecteer per-essay meta
+  const url = `${SITE}/essays/${a.slug}`;
+  const html = articleTemplate
+    .replace(/href="style\.css"/g, 'href="/style.css"')
+    .replace(/src="script\.js"/g, 'src="/script.js"')
+    .replace(/href="index\.html"/g, 'href="/"')
+    .replace(/href="writing\.html"/g, 'href="/writing.html"')
+    .replace(/href="work\.html"/g, 'href="/work.html"')
+    .replace(/href="about\.html"/g, 'href="/about.html"')
+    .replace(/href="contact\.html"/g, 'href="/contact.html"')
+    .replace(/<title>[^<]*<\/title>/, `<title>${a.title_en} · Dania Awin</title>`)
+    .replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${a.excerpt_en.replace(/"/g, '&quot;')}"`)
+    .replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${url}"`)
+    .replace(/property="og:url" content="[^"]*"/, `property="og:url" content="${url}"`)
+    .replace(/property="og:type" content="website"/, 'property="og:type" content="article"');
+  fs.writeFileSync(`${dir}/index.html`, html);
+}
+
+console.log(`✓ sitemap.xml + rss.xml + ${sorted.length} essay-pagina's gegenereerd`);

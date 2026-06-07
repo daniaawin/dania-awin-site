@@ -1,2 +1,0 @@
-# Schone essay-URLs (Cloudflare Pages syntax)
-/essays/* /article.html?slug=:splat 200
