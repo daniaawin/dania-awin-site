@@ -135,7 +135,7 @@
   function essayRowHTML(article, lang) {
     const readLabel = resolveContent("labels.readMore", lang) || (lang === "nl" ? "Lees →" : "Read →");
     return `
-      <a href="essays/${encodeURIComponent(article.slug)}" class="essay-row" data-slug="${article.slug}">
+      <a href="/essays/${encodeURIComponent(article.slug)}" class="essay-row" data-slug="${article.slug}">
         <div class="essay-row__meta">
           ${formatDate(article.date, lang)}
           <span class="cat">${article.category[lang]}</span>
@@ -348,7 +348,7 @@
             ${notFound}
           </h1>
           <p style="color: var(--ink-soft);">
-            <a href="writing.html" class="link">${back}</a>
+            <a href="/writing.html" class="link">${back}</a>
           </p>
         </section>
       `;
@@ -408,8 +408,8 @@
   async function loadData() {
     try {
       const [siteRes, articlesRes] = await Promise.all([
-        fetch("content/site.json"),
-        fetch("content/articles.json")
+        fetch("/content/site.json"),
+        fetch("/content/articles.json")
       ]);
       const siteJson = await siteRes.json();
       const articlesJson = await articlesRes.json();
