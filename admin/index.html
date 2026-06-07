@@ -3,10 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Dania Awin — Admin</title>
+  <script>
+    // Verwijder oude service workers van Decap CMS (uit eerdere setup)
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(regs) {
+        for (var r of regs) { r.unregister(); }
+      });
+    }
+    // Verwijder oude cached storage van Decap / Netlify Identity
+    try {
+      Object.keys(localStorage).forEach(function(k){
+        if (k.indexOf('netlify') !== -1 || k.indexOf('decap') !== -1 || k.indexOf('nf-') !== -1) {
+          localStorage.removeItem(k);
+        }
+      });
+    } catch(e){}
+  </script>
 </head>
 <body>
-  <!-- Sveltia CMS: drop-in vervanger van Decap, met ingebouwde GitHub login (geen Netlify Identity meer nodig) -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+  <!-- Sveltia CMS - vaste versie zodat browser niet door cache wordt verward -->
+  <script src="https://unpkg.com/@sveltia/cms@0.166.0/dist/sveltia-cms.js?v=3" type="module"></script>
 </body>
 </html>

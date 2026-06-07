@@ -1,12 +1,12 @@
 # =========================================================
-# Decap CMS — Dania Awin
+# Sveltia CMS — Dania Awin
 # =========================================================
 
 backend:
   name: github
   repo: daniaawin/dania-awin-site
   branch: main
-  base_url: https://cms-auth.sveltia.dev
+  # Geen externe auth-proxy meer; inloggen via Personal Access Token (de tweede knop op het login-scherm)
 
 media_folder: "media"
 public_folder: "/media"

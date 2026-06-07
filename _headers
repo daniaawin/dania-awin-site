@@ -3,3 +3,25 @@
 
 /rss.xml
   Content-Type: application/rss+xml; charset=utf-8
+
+# Geen caching op HTML pagina's, zodat updates altijd meteen zichtbaar zijn
+/*.html
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  Pragma: no-cache
+  Expires: 0
+
+/
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  Pragma: no-cache
+  Expires: 0
+
+/admin/*
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  Pragma: no-cache
+  Expires: 0
+  Clear-Site-Data: "cache", "storage"
+
+/essays/*
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  Pragma: no-cache
+  Expires: 0
