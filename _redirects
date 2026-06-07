@@ -1,2 +1,2 @@
-# Schone essay-URLs voor SEO
-/essays/:slug   /article.html?slug=:slug   200
+# Schone essay-URLs (Cloudflare Pages syntax)
+/essays/* /article.html?slug=:splat 200
