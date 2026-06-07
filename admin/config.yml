@@ -3,8 +3,10 @@
 # =========================================================
 
 backend:
-  name: git-gateway
+  name: github
+  repo: daniaawin/dania-awin-site
   branch: main
+  base_url: https://cms-auth.sveltia.dev
 
 media_folder: "media"
 public_folder: "/media"

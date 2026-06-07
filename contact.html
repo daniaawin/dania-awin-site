@@ -92,9 +92,12 @@
       <h1 class="display" style="margin-top: 1.5rem;" data-c="contact.title"></h1>
       <p class="archive-intro" style="margin-top: 2rem;" data-c="contact.intro"></p>
 
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" action="/contact.html?sent=1">
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden><label>Don't fill: <input name="bot-field" /></label></p>
+      <form method="POST" class="contact-form" action="https://formsubmit.co/d.awin@live.nl">
+        <input type="hidden" name="_subject" value="Nieuw bericht via daniaawin.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://daniaawin.com/contact.html?sent=1" />
+        <input type="text" name="_honey" style="display:none" />
 
         <div class="field">
           <label for="name"><span class="nl">Naam</span><span class="en">Name</span></label>
@@ -147,7 +150,7 @@
 
 
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <script src="script.js"></script>
 </body>
 </html>
