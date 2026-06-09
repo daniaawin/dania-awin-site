@@ -1,12 +1,48 @@
-// Genereert sitemap.xml en rss.xml op basis van content/articles.json
-// Loopt bij elke Netlify-build automatisch.
+// Genereert sitemap.xml + rss.xml + per-essay HTML.
+// Belangrijk: zet versie-hashes op style.css en script.js in alle HTML
+// zodat browsers nooit een verouderde versie tonen.
+// Loopt automatisch bij elke Cloudflare Pages-build.
+
 const fs = require("fs");
+const crypto = require("crypto");
 
 const SITE = "https://daniaawin.com";
+
+// ---------- Cache-busting hashes ----------
+function shortHash(filePath) {
+  const buf = fs.readFileSync(filePath);
+  return crypto.createHash("md5").update(buf).digest("hex").slice(0, 8);
+}
+const CSS_VER = shortHash("style.css");
+const JS_VER  = shortHash("script.js");
+
+// Schrijf hash-versies naar de HTML-bestanden zelf, zodat ze altijd up-to-date
+// zijn. Dit doen we voor elke HTML in de root.
+const ROOT_HTML = [
+  "index.html",
+  "writing.html",
+  "about.html",
+  "work.html",
+  "contact.html",
+  "article.html",
+  "404.html"
+];
+for (const name of ROOT_HTML) {
+  if (!fs.existsSync(name)) continue;
+  let html = fs.readFileSync(name, "utf8");
+  // Verwijder bestaande versies en zet de nieuwe erop
+  html = html
+    .replace(/href="style\.css(\?v=[a-f0-9]+)?"/g, `href="style.css?v=${CSS_VER}"`)
+    .replace(/href="\/style\.css(\?v=[a-f0-9]+)?"/g, `href="/style.css?v=${CSS_VER}"`)
+    .replace(/src="script\.js(\?v=[a-f0-9]+)?"/g, `src="script.js?v=${JS_VER}"`)
+    .replace(/src="\/script\.js(\?v=[a-f0-9]+)?"/g, `src="/script.js?v=${JS_VER}"`);
+  fs.writeFileSync(name, html);
+}
+
+// ---------- sitemap.xml ----------
 const articles = JSON.parse(fs.readFileSync("content/articles.json", "utf8")).articles;
 const sorted = [...articles].sort((a, b) => b.date.localeCompare(a.date));
 
-// --- sitemap.xml ---
 const staticPages = [
   ["/", "1.0", "weekly"],
   ["/writing.html", "0.9", "weekly"],
@@ -24,7 +60,7 @@ for (const a of sorted) {
 sitemap += '</urlset>\n';
 fs.writeFileSync("sitemap.xml", sitemap);
 
-// --- rss.xml ---
+// ---------- rss.xml ----------
 const now = new Date().toUTCString();
 function rfcDate(iso) {
   return new Date(iso + "T12:00:00Z").toUTCString();
@@ -60,17 +96,16 @@ ${items}
 `;
 fs.writeFileSync("rss.xml", rss);
 
-// --- /essays/SLUG/index.html voor elke essay (echte bestanden, geen rewrite nodig) ---
+// ---------- /essays/SLUG/index.html voor elke essay ----------
 const articleTemplate = fs.readFileSync("article.html", "utf8");
 if (!fs.existsSync("essays")) fs.mkdirSync("essays");
 for (const a of sorted) {
   const dir = `essays/${a.slug}`;
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  // Pas paden aan (één niveau dieper) en injecteer per-essay meta
   const url = `${SITE}/essays/${a.slug}`;
   const html = articleTemplate
-    .replace(/href="style\.css"/g, 'href="/style.css"')
-    .replace(/src="script\.js"/g, 'src="/script.js"')
+    .replace(/href="style\.css(\?v=[a-f0-9]+)?"/g, `href="/style.css?v=${CSS_VER}"`)
+    .replace(/src="script\.js(\?v=[a-f0-9]+)?"/g, `src="/script.js?v=${JS_VER}"`)
     .replace(/href="index\.html"/g, 'href="/"')
     .replace(/href="writing\.html"/g, 'href="/writing.html"')
     .replace(/href="work\.html"/g, 'href="/work.html"')
@@ -85,3 +120,4 @@ for (const a of sorted) {
 }
 
 console.log(`✓ sitemap.xml + rss.xml + ${sorted.length} essay-pagina's gegenereerd`);
+console.log(`✓ Cache-busting: style.css?v=${CSS_VER}  script.js?v=${JS_VER}`);
