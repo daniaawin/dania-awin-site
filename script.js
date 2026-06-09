@@ -7,6 +7,14 @@
 (function () {
   "use strict";
 
+  // Veiligheid: oude service workers van Decap/Netlify Identity opruimen,
+  // zodat ze niet ergens nog oude versies van pagina's vasthouden.
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(regs) {
+      for (var r of regs) { r.unregister(); }
+    }).catch(function(){});
+  }
+
   const DEFAULT_LANG = "en";
 
   // Globals that the render functions use
