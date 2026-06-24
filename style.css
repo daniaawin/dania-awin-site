@@ -577,11 +577,7 @@ hr.rule {
   border: 0;
 }
 
-@media (min-width: 880px) {
-  .article-body .article-embed {
-    margin: 2.5em -3rem;
-  }
-}
+/* Video-embeds blijven binnen de tekstkolom voor rustige uitlijning */
 
 /* ---------- Writing (archive) ---------- */
 
