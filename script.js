@@ -24,13 +24,13 @@
   /* ---------- Language ---------- */
 
   function getLang() {
+    // Engels is de standaard voor iedereen. Alleen als iemand zelf op de NL/EN-knop
+    // klikt, wordt die voorkeur opgeslagen. Browser-taal-detectie staat bewust uit.
     try {
       const saved = localStorage.getItem("daw-lang");
-      if (saved) return saved;
+      if (saved === "nl" || saved === "en") return saved;
     } catch (e) {}
-    // Auto-detect op basis van browser-taal
-    const browserLang = (navigator.language || navigator.userLanguage || "en").toLowerCase();
-    return browserLang.startsWith("nl") ? "nl" : "en";
+    return DEFAULT_LANG;
   }
 
   function setLang(lang) {
