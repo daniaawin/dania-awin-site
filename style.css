@@ -532,6 +532,57 @@ hr.rule {
 .article-body li { margin-bottom: 0.5em; }
 .article-body hr { border: 0; border-top: 1px solid var(--rule); margin: 3em 0; }
 
+/* ---------- Article figures (foto's met bijschrift) ---------- */
+.article-body figure {
+  margin: 2.5em 0;
+}
+.article-body figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+.article-body figure figcaption {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-top: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Hero-figure mag iets breder dan tekstkolom op desktop */
+@media (min-width: 880px) {
+  .article-body figure.article-figure--hero {
+    margin: 1em -3rem 2.5em;
+  }
+}
+
+/* ---------- Article video-embeds (YouTube etc.) ---------- */
+.article-body .article-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin: 2.5em 0;
+  overflow: hidden;
+  background: var(--bg-soft);
+  border-radius: 2px;
+}
+.article-body .article-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 880px) {
+  .article-body .article-embed {
+    margin: 2.5em -3rem;
+  }
+}
+
 /* ---------- Writing (archive) ---------- */
 
 .archive-head {
